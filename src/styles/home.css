@@ -2,6 +2,10 @@
   background: var(--hero-bg);
 }
 
+.hero__section p:nth-child(1) {
+  font-weight: 500;
+}
+
 .buy__btn {
   border: none;
   outline: none;
