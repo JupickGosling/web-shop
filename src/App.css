@@ -62,3 +62,13 @@ img {
 section {
   padding: 60px 0px;
 }
+
+.section__title {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.section__subtitle {
+  color: var(--small-text-color);
+  margin-top: 40px;
+}
