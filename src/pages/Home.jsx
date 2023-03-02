@@ -19,29 +19,36 @@ import { Container, Row, Col } from "reactstrap";
 const Home = () => {
   const [Trend, setTrend] = useState([]);
   const [Best, setBest] = useState([]);
-  const [NewArr, setNewArr] = useState([]);
+  // const [NewArr, setNewArr] = useState([]);
 
-  const year = new Date().getFullYear();
+  // const year = new Date().getFullYear();
 
   useEffect(() => {
     const filterTrendProducts = products.filter(
-      (item) => item.category === "Хлеб"
+      (item) => item.category === "Хлеб и выпечка"
     );
     setTrend(filterTrendProducts);
     const filterBestProducts = products.filter(
-      (item) => item.category === "Фрукты"
+      (item) => item.category === "Фрукты и овощи"
     );
     setBest(filterBestProducts);
   }, []);
 
   return (
-    <Helmet title={"Home"}>
+    <Helmet title={"Главная"}>
       <section className="hero__section">
         <Container>
           <Row>
             <Col lg="6" md="6">
               <div className="hero__content">
-                <p className="hero__subtitle">PuPuPu {year}</p>
+                {/* <p className="hero__subtitle"> {year}</p> */}
+                <h2>Lorem ipsum dolor sit amet.</h2>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
+                  optio nisi fugiat praesentium deleniti quas vel id dolor
+                  eligendi magnam illum quidem sint ratione facere dolorum
+                  nihil, in voluptatibus? Aliquid.
+                </p>
                 <motion.button whileTap={{ scale: 1.2 }} className="buy__btn">
                   <Link to="/shop">Перейти в магазин</Link>
                 </motion.button>
@@ -60,7 +67,7 @@ const Home = () => {
         <Container>
           <Row>
             <Col lg="12" className="text-center">
-              <h2 className="section__title">Трендовые продукты</h2>
+              <h2 className="section__title">Новинки</h2>
             </Col>
             <ProductList data={Trend} />
           </Row>
@@ -71,7 +78,7 @@ const Home = () => {
         <Container>
           <Row>
             <Col lg="12" className="text-center">
-              <h2 className="section__title">Лучшие продажи</h2>
+              <h2 className="section__title">Выбор покупателя</h2>
             </Col>
             <ProductList data={Best} />
           </Row>
@@ -81,7 +88,7 @@ const Home = () => {
       <section className="timer__count">
         <Container>
           <Row>
-            <Col lg="6" md="6">
+            <Col lg="6" md="12" className="count__down-col">
               <div className="clock__top-content">
                 <h4 className="text-white fs-6 mb-2">
                   Ограниченное предложение
@@ -96,7 +103,7 @@ const Home = () => {
                 <Link to="/shop">Перейти в магазин</Link>
               </motion.button>
             </Col>
-            <Col lg="6" md="6" className="text-end">
+            <Col lg="6" md="12" className="text-end counter__img">
               <img src={counterImg} alt="" />
             </Col>
           </Row>

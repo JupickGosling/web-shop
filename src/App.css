@@ -72,3 +72,9 @@ section {
   color: var(--small-text-color);
   margin-top: 40px;
 }
+
+@media only screen and (max-width: 768px) {
+  section {
+    padding: 40px 0px;
+  }
+}

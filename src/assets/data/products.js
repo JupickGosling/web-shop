@@ -13,7 +13,7 @@ import productImg08 from "../images/Лук.png";
 import productImg09 from "../images/Мандарины.png";
 
 import productImg13 from "../images/Масло.png";
-import productImg14 from "../images/Молоко.png";
+// import productImg14 from "../images/Молоко.png";
 import productImg15 from "../images/Помидоры.png";
 import productImg16 from "../images/Темный-хлеб.png";
 import productImg17 from "../images/Тостовый-хлеб.png";
@@ -28,7 +28,7 @@ const products = [
     id: "01",
     productName: "Батон",
     imgUrl: productImg01,
-    category: "Хлеб",
+    category: "Хлеб и выпечка",
     price: "47.00",
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
@@ -47,7 +47,7 @@ const products = [
     id: "02",
     productName: "Хлеб",
     imgUrl: productImg02,
-    category: "Хлеб",
+    category: "Хлеб и выпечка",
     price: "66.00",
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
@@ -70,7 +70,7 @@ const products = [
     id: "03",
     productName: "Хлеб",
     imgUrl: productImg03,
-    category: "Хлеб",
+    category: "Хлеб и выпечка",
     price: "66.00",
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
@@ -92,7 +92,7 @@ const products = [
     id: "04",
     productName: "Хлеб",
     imgUrl: productImg04,
-    category: "Хлеб",
+    category: "Хлеб и выпечка",
     price: "66.00",
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
@@ -113,9 +113,9 @@ const products = [
 
   {
     id: "05",
-    productName: "Faux Velvet Sofa",
+    productName: "Картофель",
     imgUrl: productImg05,
-    category: "sofa",
+    category: "Фрукты и овощи",
     price: "163.00",
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
@@ -136,9 +136,9 @@ const products = [
 
   {
     id: "06",
-    productName: "Fllufy Sheep Sofa",
+    productName: "Картофель",
     imgUrl: productImg06,
-    category: "sofa",
+    category: "Фрукты и овощи",
     price: "163.00",
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
@@ -160,7 +160,7 @@ const products = [
     id: "07",
     productName: "Клубника",
     imgUrl: productImg07,
-    category: "Фрукты",
+    category: "Фрукты и овощи",
     price: "99.00",
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
@@ -183,7 +183,7 @@ const products = [
     id: "27",
     productName: "Киви",
     imgUrl: productImg007,
-    category: "Фрукты",
+    category: "Фрукты и овощи",
     price: "173.00",
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
@@ -204,9 +204,9 @@ const products = [
 
   {
     id: "08",
-    productName: "Baltsar Chair",
+    productName: "Лук",
     imgUrl: productImg08,
-    category: "chair",
+    category: "Фрукты и овощи",
     price: "89.00",
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
@@ -229,7 +229,7 @@ const products = [
     id: "09",
     productName: "Мандарины",
     imgUrl: productImg09,
-    category: "Фрукты",
+    category: "Фрукты и овощи",
     price: "112.00",
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
@@ -250,10 +250,10 @@ const products = [
 
   {
     id: "10",
-    productName: "Apple iPhone 12 Pro",
+    productName: "Масло",
     imgUrl: productImg13,
-    category: "mobile",
-    price: 799.0,
+    category: "Молоко, сыр, яйцо",
+    price: 99.0,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
     description:
@@ -270,34 +270,34 @@ const products = [
     ],
     avgRating: 4.8,
   },
-  {
-    id: "11",
-    productName: "Apple iPhone 12 Max",
-    imgUrl: productImg14,
-    category: "mobile",
-    price: 799.0,
-    shortDesc:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
-    reviews: [
-      {
-        rating: 4.8,
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-      },
-      {
-        rating: 4.9,
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-      },
-    ],
-    avgRating: 4.8,
-  },
+  // {
+  //   id: "11",
+  //   productName: "Apple iPhone 12 Max",
+  //   imgUrl: productImg14,
+  //   category: "mobile",
+  //   price: 799.0,
+  //   shortDesc:
+  //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
+  //   description:
+  //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+  //   reviews: [
+  //     {
+  //       rating: 4.8,
+  //       text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+  //     },
+  //     {
+  //       rating: 4.9,
+  //       text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+  //     },
+  //   ],
+  //   avgRating: 4.8,
+  // },
 
   {
     id: "12",
-    productName: "Realme 8",
+    productName: "Помидоры",
     imgUrl: productImg15,
-    category: "mobile",
+    category: "Фрукты и овощи",
     price: 599.0,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
@@ -318,9 +318,9 @@ const products = [
 
   {
     id: "13",
-    productName: "One Plus Nord",
+    productName: "Темный хлеб",
     imgUrl: productImg16,
-    category: "mobile",
+    category: "Хлеб и выпечка",
     price: 799.0,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
@@ -341,9 +341,9 @@ const products = [
 
   {
     id: "14",
-    productName: "Apple iPhone 13 Pro",
+    productName: "Тостовый хлеб",
     imgUrl: productImg17,
-    category: "mobile",
+    category: "Хлеб и выпечка",
     price: 899.0,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
@@ -364,9 +364,9 @@ const products = [
 
   {
     id: "15",
-    productName: "Samsung Galaxy S22",
+    productName: "Щавель",
     imgUrl: productImg18,
-    category: "mobile",
+    category: "Фрукты и овощи",
     price: 699.0,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
@@ -389,7 +389,7 @@ const products = [
     id: "16",
     productName: "Яблоко",
     imgUrl: productImg19,
-    category: "Фрукты",
+    category: "Фрукты и овощи",
     price: "10.00",
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
@@ -410,9 +410,9 @@ const products = [
 
   {
     id: "17",
-    productName: "Timex Easy Reader Watch",
+    productName: "Donut",
     imgUrl: productImg20,
-    category: "watch",
+    category: "Хлеб и выпечка",
     price: 299.0,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
@@ -433,9 +433,9 @@ const products = [
 
   {
     id: "18",
-    productName: "Rolex Watch",
+    productName: "Donut",
     imgUrl: productImg21,
-    category: "watch",
+    category: "Хлеб и выпечка",
     price: 299.0,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
