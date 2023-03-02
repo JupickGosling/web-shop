@@ -9,6 +9,12 @@ import user_icon from "../../assets/images/user-icon.png";
 
 import { Container, Row } from "reactstrap";
 import { useSelector } from "react-redux";
+import useAuth from "../../custom-hooks/useAuth";
+import { signOut } from "firebase/auth";
+import { auth } from "../../firebase.config";
+
+import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const nav__link = [
   {
@@ -26,14 +32,19 @@ const nav__link = [
 ];
 
 const Header = () => {
+  const { currentUser } = useAuth();
   const navigate = useNavigate();
 
   const navigateToCart = () => {
     navigate("/cart");
   };
 
+  const toggleProfileActions = () =>
+    profileActionRef.current.classList.toggle("show__profileActions");
+
   const headerRef = useRef(null);
   const totalQuantity = useSelector((state) => state.cart.totalQuantity);
+  const profileActionRef = useRef(null);
 
   const menuRef = useRef(null);
 
@@ -48,6 +59,17 @@ const Header = () => {
         headerRef.current.classList.remove("stycky__header");
       }
     });
+  };
+
+  const logout = () => {
+    signOut(auth)
+      .then(() => {
+        toast.success("Вы вышли из аккаунта");
+        navigate("/home");
+      })
+      .catch((err) => {
+        toast.error(err.message);
+      });
   };
 
   useEffect(() => {
@@ -87,17 +109,36 @@ const Header = () => {
             </div>
 
             <div className="nav__icons">
-              <span className="fav__icon">
+              {/* <span className="fav__icon">
                 <i className="ri-heart-line"></i>
                 <span className="badge">1</span>
-              </span>
+              </span> */}
               <span className="cart__icon" onClick={navigateToCart}>
                 <i className="ri-shopping-bag-line"></i>
                 <span className="badge">{totalQuantity}</span>
               </span>
-              <span>
-                <motion.img whileTap={{ scale: 1.2 }} src={user_icon} alt="" />
-              </span>
+              <div>
+                <motion.img
+                  whileTap={{ scale: 1.2 }}
+                  src={currentUser ? currentUser.photoURL : user_icon}
+                  alt=""
+                  onClick={toggleProfileActions}
+                />
+                <div
+                  className="profile__actions"
+                  ref={profileActionRef}
+                  onClick={toggleProfileActions}
+                >
+                  {currentUser ? (
+                    <span onClick={logout}>Logout</span>
+                  ) : (
+                    <div className="d-flex align-items-center justify-content-center flex-column">
+                      <Link to="/signup">Signup</Link>
+                      <Link to="/login">Login</Link>
+                    </div>
+                  )}
+                </div>
+              </div>
               <div className="mobile__menu">
                 <span onClick={menuToggle}>
                   <i className="ri-menu-line"></i>
