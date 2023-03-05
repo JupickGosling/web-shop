@@ -16,6 +16,7 @@ import { async } from "@firebase/util";
 import { useNavigate } from "react-router-dom";
 
 const Signup = () => {
+  
   const [username, setUserName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");

@@ -20,6 +20,7 @@ const ProductDetails = () => {
 
   const [rating, setRating] = useState(null);
   const { id } = useParams();
+  
   const product = products.find((item) => item.id === id);
 
   const {

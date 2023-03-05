@@ -10,6 +10,7 @@ import products from "../assets/data/products";
 import ProductList from "../components/UI/ProductList";
 
 const Shop = () => {
+  
   const [productsData, setProductsData] = useState(products);
 
   const handleFilter = (e) => {

@@ -9,6 +9,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 
 const Cart = () => {
+  
   const cartItems = useSelector((state) => state.cart.cartItems);
   const totalAmount = useSelector((state) => state.cart.totalAmount);
 
@@ -61,11 +62,9 @@ const Cart = () => {
 
 const Tr = ({ item }) => {
   const dispatch = useDispatch();
-
   const deleteProduct = () => {
     dispatch(cartActions.deleteItem(item.id));
   };
-
   return (
     <tr>
       <td>
@@ -73,7 +72,7 @@ const Tr = ({ item }) => {
       </td>
       <td>{item.productName}</td>
       <td>{item.price}₽</td>
-      <td>{item.quantity}px</td>
+      <td>{item.quantity}шт</td>
       <td>
         <motion.i
           whileTap={{ scale: 1.2 }}

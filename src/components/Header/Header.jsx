@@ -32,21 +32,19 @@ const nav__link = [
 ];
 
 const Header = () => {
-  const { currentUser } = useAuth();
   const navigate = useNavigate();
 
   const navigateToCart = () => {
     navigate("/cart");
   };
 
-  const toggleProfileActions = () =>
-    profileActionRef.current.classList.toggle("show__profileActions");
+  const navigateToLogin = () => {
+    navigate("/login");
+  };
 
+  const { currentUser } = useAuth();
   const headerRef = useRef(null);
   const totalQuantity = useSelector((state) => state.cart.totalQuantity);
-  const profileActionRef = useRef(null);
-
-  const menuRef = useRef(null);
 
   const stickyHeaderFunc = () => {
     window.addEventListener("scroll", () => {
@@ -60,6 +58,13 @@ const Header = () => {
       }
     });
   };
+
+  const profileActionRef = useRef(null);
+  
+  const toggleProfileActions = () =>
+    profileActionRef.current.classList.toggle("show__profileActions");
+
+  const menuRef = useRef(null);
 
   const logout = () => {
     signOut(auth)
@@ -117,12 +122,12 @@ const Header = () => {
                 <i className="ri-shopping-bag-line"></i>
                 <span className="badge">{totalQuantity}</span>
               </span>
-              <div>
+              <div className="profile">
                 <motion.img
                   whileTap={{ scale: 1.2 }}
                   src={currentUser ? currentUser.photoURL : user_icon}
                   alt=""
-                  onClick={toggleProfileActions}
+                  onClick={navigateToLogin}
                 />
                 <div
                   className="profile__actions"
